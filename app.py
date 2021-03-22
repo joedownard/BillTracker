@@ -4,9 +4,12 @@ import bill_tracker_core as core
 import db_interactions as database
 import email_sender
 import secret_manager as secret
+import file_store as store
 import logging
 import random
 import string
+
+
 
 app = Flask(__name__)
 logger = logging.getLogger()
@@ -140,6 +143,11 @@ def db_testing():
     else:
         return str(response)
 
+@app.route('/fileread')
+def file_testing():
+    filename = 'bills-app-305000.appspot.com/pickle_files'
+
+    return store.read_file(filename)
 
 # It will then redirect you to the logged_in or garbage page, depending on if you gave it the right password or not
 @app.route('/login', methods=['POST'])

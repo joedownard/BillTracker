@@ -9,3 +9,5 @@ requests~=2.25.1
 pandas~=1.2.3
 google-cloud-secret-manager==2.2.0
 google-cloud-logging==2.3.0
+google-cloud-storage==1.36.2
+GoogleAppEngineCloudStorageClient==1.9.22.1
