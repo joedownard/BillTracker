@@ -4,7 +4,6 @@ import bill_tracker_core as core
 import db_interactions as database
 import email_sender
 import secret_manager as secret
-import file_store as store
 import logging
 import random
 import string
